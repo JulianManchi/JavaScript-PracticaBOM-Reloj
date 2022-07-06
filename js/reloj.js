@@ -50,7 +50,13 @@ function obtenerFecha() {
   }
 
   let horaReloj = document.getElementById("Hora");
-  horaReloj.innerHTML = `${horas}:${minutos}:${segundos}`
+  horaReloj.innerHTML = `${horas}:${minutos}:${segundos}`;
 }
 
 setInterval(obtenerFecha, 1000);
+
+function cambiarColor(color){
+    let seccion = document.getElementsByClassName('fechaHora');
+    console.log(seccion[0]);
+    seccion[0].className = `fechaHora ${color}`;
+}
